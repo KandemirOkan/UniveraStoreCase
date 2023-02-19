@@ -1,0 +1,12 @@
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Entities\bin\Debug\net7.0\UniveraStoreCase.Entities.deps.json
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Entities\bin\Debug\net7.0\UniveraStoreCase.Entities.dll
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Entities\bin\Debug\net7.0\UniveraStoreCase.Entities.pdb
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Entities\obj\Debug\net7.0\UniveraStoreCase.Entities.csproj.AssemblyReference.cache
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Entities\obj\Debug\net7.0\UniveraStoreCase.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Entities\obj\Debug\net7.0\UniveraStoreCase.Entities.AssemblyInfoInputs.cache
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Entities\obj\Debug\net7.0\UniveraStoreCase.Entities.AssemblyInfo.cs
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Entities\obj\Debug\net7.0\UniveraStoreCase.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Entities\obj\Debug\net7.0\UniveraStoreCase.Entities.dll
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Entities\obj\Debug\net7.0\refint\UniveraStoreCase.Entities.dll
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Entities\obj\Debug\net7.0\UniveraStoreCase.Entities.pdb
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Entities\obj\Debug\net7.0\ref\UniveraStoreCase.Entities.dll

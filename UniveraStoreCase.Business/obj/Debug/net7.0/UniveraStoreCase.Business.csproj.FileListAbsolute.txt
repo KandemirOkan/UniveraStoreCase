@@ -1,0 +1,17 @@
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\bin\Debug\net7.0\UniveraStoreCase.Business.deps.json
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\bin\Debug\net7.0\UniveraStoreCase.Business.dll
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\bin\Debug\net7.0\UniveraStoreCase.Business.pdb
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\obj\Debug\net7.0\UniveraStoreCase.Business.csproj.AssemblyReference.cache
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\obj\Debug\net7.0\UniveraStoreCase.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\obj\Debug\net7.0\UniveraStoreCase.Business.AssemblyInfoInputs.cache
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\obj\Debug\net7.0\UniveraStoreCase.Business.AssemblyInfo.cs
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\obj\Debug\net7.0\UniveraStoreCase.Business.csproj.CoreCompileInputs.cache
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\obj\Debug\net7.0\UniveraStoreCase.Business.dll
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\obj\Debug\net7.0\refint\UniveraStoreCase.Business.dll
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\obj\Debug\net7.0\UniveraStoreCase.Business.pdb
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\obj\Debug\net7.0\ref\UniveraStoreCase.Business.dll
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\bin\Debug\net7.0\UniveraStoreCase.DataAccess.dll
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\bin\Debug\net7.0\UniveraStoreCase.Entities.dll
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\bin\Debug\net7.0\UniveraStoreCase.DataAccess.pdb
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\bin\Debug\net7.0\UniveraStoreCase.Entities.pdb
+C:\Users\Okan\Documents\GitHub\UniveraStoreCase\UniveraStoreCase.Business\obj\Debug\net7.0\UniveraStoreCase.Business.csproj.CopyComplete
