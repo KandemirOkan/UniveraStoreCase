@@ -37,10 +37,5 @@ namespace UniveraStoreCase.DataAccess.Repositories.EfCoreRepositories
             var listResponseDto = _mapper.Map<List<ProductResponseDto>>(listProducts);
             return listResponseDto;
         }
-
-        public Task<List<Product>> GetProductByCategory()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

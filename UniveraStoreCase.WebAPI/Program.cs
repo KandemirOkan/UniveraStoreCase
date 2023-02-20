@@ -6,8 +6,9 @@ using UniveraStoreCase.Business.Services.ProductServices;
 using UniveraStoreCase.DataAccess.Data;
 using UniveraStoreCase.DataAccess.Repositories.EfCoreRepositories;
 using UniveraStoreCase.DataAccess.Repositories.IRepositories;
+using UniveraStoreCase.DataAccess.SeedData;
 
-//Seed.SeedData();
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -19,7 +20,6 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<UniveraDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlDb")));
-
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

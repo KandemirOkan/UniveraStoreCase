@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UniveraStoreCase.DataAccess.Data;
 
@@ -11,9 +12,11 @@ using UniveraStoreCase.DataAccess.Data;
 namespace UniveraStoreCase.DataAccess.Migrations
 {
     [DbContext(typeof(UniveraDbContext))]
-    partial class UniveraDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230220205141_dataseed")]
+    partial class dataseed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,64 +46,6 @@ namespace UniveraStoreCase.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CategoryBrands");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Brand = "Volkswagen",
-                            ProductId = 0,
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Brand = "Fiat",
-                            ProductId = 0,
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Brand = "Renault",
-                            ProductId = 0,
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Brand = "Ford",
-                            ProductId = 0,
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Brand = "Ferrari",
-                            ProductId = 0,
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Brand = "Skoda",
-                            ProductId = 0,
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Brand = "Man",
-                            ProductId = 0,
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Brand = "Audi",
-                            ProductId = 0,
-                            Status = false
-                        });
                 });
 
             modelBuilder.Entity("UniveraStoreCase.Entities.Entities.CategoryColor", b =>
@@ -124,43 +69,6 @@ namespace UniveraStoreCase.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CategoryColors");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Color = "Beyaz",
-                            ProductId = 0,
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Color = "Siyah",
-                            ProductId = 0,
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Color = "Gri",
-                            ProductId = 0,
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Color = "Mavi",
-                            ProductId = 0,
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Color = "Sarı",
-                            ProductId = 0,
-                            Status = false
-                        });
                 });
 
             modelBuilder.Entity("UniveraStoreCase.Entities.Entities.CategoryFuelType", b =>
@@ -184,43 +92,6 @@ namespace UniveraStoreCase.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CategoryFuelTypes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            FuelType = "Benzin",
-                            ProductId = 0,
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            FuelType = "Dizel",
-                            ProductId = 0,
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 3,
-                            FuelType = "LPG",
-                            ProductId = 0,
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 4,
-                            FuelType = "Hibrit",
-                            ProductId = 0,
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 5,
-                            FuelType = "Elektrik",
-                            ProductId = 0,
-                            Status = false
-                        });
                 });
 
             modelBuilder.Entity("UniveraStoreCase.Entities.Entities.CategoryVehicleType", b =>
@@ -244,36 +115,6 @@ namespace UniveraStoreCase.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CategoryVehicleTypes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ProductId = 0,
-                            Status = false,
-                            VehicleType = "Hususi"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ProductId = 0,
-                            Status = false,
-                            VehicleType = "Ticari"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ProductId = 0,
-                            Status = false,
-                            VehicleType = "Kamyonet"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            ProductId = 0,
-                            Status = false,
-                            VehicleType = "Spor"
-                        });
                 });
 
             modelBuilder.Entity("UniveraStoreCase.Entities.Entities.CategoryYear", b =>
@@ -297,246 +138,6 @@ namespace UniveraStoreCase.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CategoryYears");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 1990
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 1991
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 1992
-                        },
-                        new
-                        {
-                            Id = 4,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 1993
-                        },
-                        new
-                        {
-                            Id = 5,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 1994
-                        },
-                        new
-                        {
-                            Id = 6,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 1995
-                        },
-                        new
-                        {
-                            Id = 7,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 1996
-                        },
-                        new
-                        {
-                            Id = 8,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 1997
-                        },
-                        new
-                        {
-                            Id = 9,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 1998
-                        },
-                        new
-                        {
-                            Id = 10,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 1999
-                        },
-                        new
-                        {
-                            Id = 11,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2000
-                        },
-                        new
-                        {
-                            Id = 12,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2001
-                        },
-                        new
-                        {
-                            Id = 13,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2002
-                        },
-                        new
-                        {
-                            Id = 14,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2003
-                        },
-                        new
-                        {
-                            Id = 15,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2004
-                        },
-                        new
-                        {
-                            Id = 16,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2005
-                        },
-                        new
-                        {
-                            Id = 17,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2006
-                        },
-                        new
-                        {
-                            Id = 18,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2007
-                        },
-                        new
-                        {
-                            Id = 19,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2008
-                        },
-                        new
-                        {
-                            Id = 20,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2009
-                        },
-                        new
-                        {
-                            Id = 21,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2010
-                        },
-                        new
-                        {
-                            Id = 22,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2011
-                        },
-                        new
-                        {
-                            Id = 23,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2012
-                        },
-                        new
-                        {
-                            Id = 24,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2013
-                        },
-                        new
-                        {
-                            Id = 25,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2014
-                        },
-                        new
-                        {
-                            Id = 26,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2015
-                        },
-                        new
-                        {
-                            Id = 27,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2016
-                        },
-                        new
-                        {
-                            Id = 28,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2017
-                        },
-                        new
-                        {
-                            Id = 29,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2018
-                        },
-                        new
-                        {
-                            Id = 30,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2019
-                        },
-                        new
-                        {
-                            Id = 31,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2020
-                        },
-                        new
-                        {
-                            Id = 32,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2021
-                        },
-                        new
-                        {
-                            Id = 33,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2022
-                        },
-                        new
-                        {
-                            Id = 34,
-                            ProductId = 0,
-                            Status = false,
-                            Year = 2023
-                        });
                 });
 
             modelBuilder.Entity("UniveraStoreCase.Entities.Entities.Product", b =>

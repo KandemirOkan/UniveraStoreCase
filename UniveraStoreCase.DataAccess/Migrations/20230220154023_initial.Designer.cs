@@ -12,7 +12,7 @@ using UniveraStoreCase.DataAccess.Data;
 namespace UniveraStoreCase.DataAccess.Migrations
 {
     [DbContext(typeof(UniveraDbContext))]
-    [Migration("20230219210903_initial")]
+    [Migration("20230220154023_initial")]
     partial class initial
     {
         /// <inheritdoc />

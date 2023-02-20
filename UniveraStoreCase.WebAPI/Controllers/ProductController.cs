@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Drawing;
 using UniveraStoreCase.Business.Services.ProductServices;
+using UniveraStoreCase.Entities.DTOs.RequestDtos;
+using UniveraStoreCase.Entities.Entities;
 
 namespace UniveraStoreCase.WebAPI.Controllers
 {
@@ -23,27 +26,37 @@ namespace UniveraStoreCase.WebAPI.Controllers
 
 
         [HttpGet("[action]/{productId}")]
-        public string Get(int id)
+        public async Task<IActionResult> GetProductById(int id)
         {
-            return "value";
+            var product = await _productService.GetProductById(id);
+            return Ok(product);
         }
 
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetProductByCategories(int BrandId, int ColorId, int FuelTypeId, int VehicleTypeId, int YearId)
+        {
+            var product = await _productService.GetProductsByCategories(BrandId,ColorId,FuelTypeId,VehicleTypeId,YearId);
+            return Ok(product);
+        }
 
         [HttpPost("[action]")]
-        public void Post([FromBody] string value)
+        public IActionResult CreateProduct([FromBody] ProductRequestDto newProduct)
         {
+            _productService.CreateProduct(newProduct);
+            return Ok();
+            
         }
-
 
         [HttpPut("[action]")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult UpdateProduct([FromBody] ProductRequestDto newProduct)
         {
+            _productService.UpdateProduct(newProduct);
+            return Ok();
         }
 
-
-        [HttpDelete("[action]")]
-        public void Delete(int id)
-        {
-        }
+        //[HttpDelete("[action]")]
+        //public void Delete(int id)
+        //{
+        //}
     }
 }

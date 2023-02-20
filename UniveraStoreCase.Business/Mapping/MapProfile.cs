@@ -18,6 +18,9 @@ namespace UniveraStoreCase.Business.Mapping
 
             CreateMap<ProductResponseDto, Product>().ReverseMap();
 
+
+            
+
         }
 
     }

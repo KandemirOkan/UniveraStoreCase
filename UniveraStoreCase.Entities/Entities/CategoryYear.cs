@@ -8,7 +8,7 @@ namespace UniveraStoreCase.Entities.Entities
 {
     public class CategoryYear : BaseEntity
     {
-        public string Year { get; set; }
+        public int Year { get; set; }
         public ICollection<Product> Product { get; set; }
         public int ProductId { get; set; }
     }

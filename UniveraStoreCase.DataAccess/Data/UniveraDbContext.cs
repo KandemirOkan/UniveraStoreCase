@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using UniveraStoreCase.DataAccess.SeedData;
 using UniveraStoreCase.Entities.Entities;
 
 namespace UniveraStoreCase.DataAccess.Data
@@ -26,6 +27,7 @@ namespace UniveraStoreCase.DataAccess.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            modelBuilder.SeedData();
         }
     }
 
