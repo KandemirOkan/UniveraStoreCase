@@ -9,12 +9,10 @@ using UniveraStoreCase.Entities.Entities;
 
 namespace UniveraStoreCase.DataAccess.Mapping
 {
-    public class CategoryColorMap : IEntityTypeConfiguration<CategoryColor>
+    public class ListMap : IEntityTypeConfiguration<List>
     {
-        public void Configure(EntityTypeBuilder<CategoryColor> builder)
+        public void Configure(EntityTypeBuilder<List> builder)
         {
-            builder.HasKey(c => c.Id);
-            builder.Property(c => c.Color).HasMaxLength(50);
         }
     }
 }

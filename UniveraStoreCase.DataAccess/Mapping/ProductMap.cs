@@ -13,7 +13,6 @@ namespace UniveraStoreCase.DataAccess.Mapping
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {
-            builder.HasKey(c => c.Id);
             builder.Property(c => c.Price).HasPrecision(16,2);
             builder.Property(c => c.Description).HasMaxLength(500);
             builder.Property(c => c.Name).HasMaxLength(100);

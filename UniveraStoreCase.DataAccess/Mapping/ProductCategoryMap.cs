@@ -9,12 +9,10 @@ using UniveraStoreCase.Entities.Entities;
 
 namespace UniveraStoreCase.DataAccess.Mapping
 {
-    public class CategoryBrandMap : IEntityTypeConfiguration<CategoryBrand>
+    public class ProductCategoryMap : IEntityTypeConfiguration<ProductCategory>
     {
-        public void Configure(EntityTypeBuilder<CategoryBrand> builder)
+        public void Configure(EntityTypeBuilder<ProductCategory> builder)
         {
-            builder.HasKey(c => c.Id);
-            builder.Property(c=>c.Brand).HasMaxLength(50);
         }
     }
 }

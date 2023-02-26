@@ -17,17 +17,14 @@ namespace UniveraStoreCase.DataAccess.Data
         
         }
 
-        public DbSet<Product> Products { get; set; }
-        public DbSet<CategoryBrand> CategoryBrands { get; set; }
-        public DbSet<CategoryColor> CategoryColors { get; set; }
-        public DbSet<CategoryVehicleType> CategoryVehicleTypes { get; set; }
-        public DbSet<CategoryYear> CategoryYears { get; set; }
-        public DbSet<CategoryFuelType> CategoryFuelTypes { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<List> List { get; set; }
+        public DbSet<ProductCategory> ProductCategory { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-            modelBuilder.SeedData();
         }
     }
 

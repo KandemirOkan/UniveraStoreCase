@@ -11,16 +11,11 @@ namespace UniveraStoreCase.Entities.Entities
         public string Name { get; set; }
         public decimal Price { get; set; }
         public string Description { get; set; }
-        public int CategoryBrandId { get; set; }
-        public DateTime PublishDate { get; set; } 
-        public CategoryBrand CategoryBrand { get; set; }
-        public int CategoryVehicleTypeId { get; set; }
-        public CategoryVehicleType CategoryVehicleType { get; set; }
-        public int CategoryFuelTypeId { get; set; }
-        public CategoryFuelType CategoryFuelType { get; set; }
-        public int CategoryYearId { get; set; }
-        public CategoryYear CategoryYear { get; set; }
-        public int CategoryColorId { get; set; }
-        public CategoryColor CategoryColor { get; set; }
+        public int ModelYear { get; set; }
+        public DateTime PublishDate { get; set; }
+        public ICollection<Category> Category { get; set; }
+        public ICollection<List> List { get; set; }
+        public ICollection<ProductCategory> ProductCategory { get; set; }
+
     }
 }

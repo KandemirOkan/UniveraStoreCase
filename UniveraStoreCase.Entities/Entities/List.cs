@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace UniveraStoreCase.Entities.Entities
 {
-    public class CategoryVehicleType : BaseEntity
+    public class List : BaseEntity
     {
-        public string VehicleType { get; set; }
+        public ICollection<Category> Category { get; set; }
         public ICollection<Product> Product { get; set; }
-
-        public int ProductId { get; set; }
     }
 }

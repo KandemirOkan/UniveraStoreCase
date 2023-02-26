@@ -9,12 +9,13 @@ using UniveraStoreCase.Entities.Entities;
 
 namespace UniveraStoreCase.DataAccess.Mapping
 {
-    public class CategoryFuelTypeMap : IEntityTypeConfiguration<CategoryFuelType>
+    public class CategoryMap : IEntityTypeConfiguration<Category>
     {
-        public void Configure(EntityTypeBuilder<CategoryFuelType> builder)
+        public void Configure(EntityTypeBuilder<Category> builder)
         {
-            builder.HasKey(c => c.Id);
+            builder.Property(c => c.Brand).HasMaxLength(50);
             builder.Property(c => c.FuelType).HasMaxLength(50);
+            builder.Property(c => c.Color).HasMaxLength(50);
         }
     }
 }

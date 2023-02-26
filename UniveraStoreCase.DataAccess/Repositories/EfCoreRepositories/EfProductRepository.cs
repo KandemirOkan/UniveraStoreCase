@@ -25,17 +25,22 @@ namespace UniveraStoreCase.DataAccess.Repositories.EfCoreRepositories
             _mapper = mapper;
         }
 
-        public async Task<List<ProductResponseDto>> GetProductByCategory(int BrandId, int ColorId, int FuelTypeId, int VehicleTypeId, int YearId)
+        public Task<List<ProductResponseDto>> GetProductByCategory(int BrandId, int ColorId, int FuelTypeId, int VehicleTypeId, int YearId)
         {
-            var listProducts = await _context.Products.Where(x =>
-            x.CategoryBrandId == BrandId &&
-            x.CategoryColorId == ColorId &&
-            x.CategoryFuelTypeId == FuelTypeId &&
-            x.CategoryVehicleTypeId == VehicleTypeId &&
-            x.CategoryYearId == YearId).ToListAsync();
-
-            var listResponseDto = _mapper.Map<List<ProductResponseDto>>(listProducts);
-            return listResponseDto;
+            throw new NotImplementedException();
         }
+
+        //public async Task<List<ProductResponseDto>> GetProductByCategory(int BrandId, int ColorId, int FuelTypeId, int VehicleTypeId, int YearId)
+        //{
+        //    var listProducts = await _context.Products.Where(x =>
+        //    x.CategoryBrandId == BrandId &&
+        //    x.CategoryColorId == ColorId &&
+        //    x.CategoryFuelTypeId == FuelTypeId &&
+        //    x.CategoryVehicleTypeId == VehicleTypeId &&
+        //    x.CategoryYearId == YearId).ToListAsync();
+
+        //    var listResponseDto = _mapper.Map<List<ProductResponseDto>>(listProducts);
+        //    return listResponseDto;
+        //}
     }
 }

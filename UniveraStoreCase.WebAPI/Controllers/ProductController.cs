@@ -53,10 +53,5 @@ namespace UniveraStoreCase.WebAPI.Controllers
             _productService.UpdateProduct(newProduct);
             return Ok();
         }
-
-        //[HttpDelete("[action]")]
-        //public void Delete(int id)
-        //{
-        //}
     }
 }
