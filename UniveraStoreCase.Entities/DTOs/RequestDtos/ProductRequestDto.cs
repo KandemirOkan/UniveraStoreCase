@@ -11,6 +11,7 @@ namespace UniveraStoreCase.Entities.DTOs.RequestDtos
         public string Name { get; set; }
         public decimal Price { get; set; }
         public string Description { get; set; }
-        public DateTime PublishDate { get; set; }
+        public int ModelYear { get; set; }
+        public DateTime PublishDate { get; set; }= DateTime.Now;
     }
 }

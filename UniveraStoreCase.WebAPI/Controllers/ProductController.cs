@@ -2,7 +2,7 @@
 using System.Drawing;
 using UniveraStoreCase.Business.Services.ProductServices;
 using UniveraStoreCase.Entities.DTOs.RequestDtos;
-using UniveraStoreCase.Entities.Entities;
+using UniveraStoreCase.Entities.DTOs.ResponseDtos;
 
 namespace UniveraStoreCase.WebAPI.Controllers
 {
@@ -25,17 +25,10 @@ namespace UniveraStoreCase.WebAPI.Controllers
         }
 
 
-        [HttpGet("[action]/{productId}")]
-        public async Task<IActionResult> GetProductById(int id)
-        {
-            var product = await _productService.GetProductById(id);
-            return Ok(product);
-        }
-
         [HttpGet("[action]")]
-        public async Task<IActionResult> GetProductByCategories(int BrandId, int ColorId, int FuelTypeId, int VehicleTypeId, int YearId)
+        public async Task<IActionResult> GetProductById(int productId)
         {
-            var product = await _productService.GetProductsByCategories(BrandId,ColorId,FuelTypeId,VehicleTypeId,YearId);
+            var product = await _productService.GetProductById(productId);
             return Ok(product);
         }
 
@@ -48,9 +41,16 @@ namespace UniveraStoreCase.WebAPI.Controllers
         }
 
         [HttpPut("[action]")]
-        public IActionResult UpdateProduct([FromBody] ProductRequestDto newProduct)
+        public IActionResult UpdateProduct([FromBody] ProductResponseDto newProduct)
         {
             _productService.UpdateProduct(newProduct);
+            return Ok();
+        }
+
+        [HttpDelete("[action]/{productId}")]
+        public IActionResult DeleteProduct(int productId)
+        {
+            _productService.DeleteProduct(productId);
             return Ok();
         }
     }

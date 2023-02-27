@@ -1,9 +1,4 @@
 ﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UniveraStoreCase.Entities.DTOs.RequestDtos;
 using UniveraStoreCase.Entities.DTOs.ResponseDtos;
 using UniveraStoreCase.Entities.Entities;
@@ -16,12 +11,12 @@ namespace UniveraStoreCase.Business.Mapping
         {
             CreateMap<ProductRequestDto, Product>().ReverseMap();
 
-            CreateMap<ProductResponseDto, Product>().ReverseMap();
+            CreateMap<Product,ProductResponseDto>().ReverseMap();
 
+            CreateMap<Category,CategoryResponseDto>().ReverseMap();
 
-            
+            CreateMap<Category,CategoryRequestDto>().ReverseMap();       
 
         }
-
     }
 }

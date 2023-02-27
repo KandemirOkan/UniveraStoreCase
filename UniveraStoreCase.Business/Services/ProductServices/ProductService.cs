@@ -1,10 +1,4 @@
 ﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UniveraStoreCase.DataAccess.Repositories.IRepositories;
 using UniveraStoreCase.Entities.DTOs.RequestDtos;
 using UniveraStoreCase.Entities.DTOs.ResponseDtos;
@@ -23,25 +17,18 @@ namespace UniveraStoreCase.Business.Services.ProductServices
             _mapper = mapper;
         }
 
-        async Task<List<ProductResponseDto>> IProductService.GetAllProducts()
+        public async Task<List<ProductResponseDto>> GetAllProducts()
         {
             var product = await _repository.GetAllAsync();
             var productResponse = _mapper.Map<List<ProductResponseDto>>(product);
             return productResponse;
         }
 
-        async Task<ProductResponseDto> IProductService.GetProductById(int id)
+        public async Task<ProductResponseDto> GetProductById(int id)
         {
             var product = await _repository.GetEntityByIdAsync(id);
             var productResponse = _mapper.Map<ProductResponseDto>(product);
             return productResponse;
-        }
-
-        public async Task<List<ProductResponseDto>> GetProductsByCategories(int BrandId, int ColorId, int FuelTypeId, int VehicleTypeId, int YearId)
-        {
-            var products = await _repository.GetProductByCategory(BrandId, ColorId, FuelTypeId, VehicleTypeId, YearId);
-            var productsResponse = _mapper.Map<List<ProductResponseDto>>(products);
-            return productsResponse;
         }
 
         public void CreateProduct(ProductRequestDto productRequestDto)
@@ -50,13 +37,16 @@ namespace UniveraStoreCase.Business.Services.ProductServices
             _repository.Add(product);
             _repository.Save();
         }
-        public void UpdateProduct(ProductRequestDto productRequestDto)
+        public void UpdateProduct(ProductResponseDto productResponseDto)
         {
-            var product = _mapper.Map<Product>(productRequestDto);
+            var product = _mapper.Map<Product>(productResponseDto);
             _repository.Update(product);
             _repository.Save();
         }
-
-
+        public void DeleteProduct(int id)
+        {
+            _repository.Remove(id);
+            _repository.Save();
+        }
     }
 }

@@ -37,21 +37,6 @@ namespace UniveraStoreCase.DataAccess.Migrations
                     b.ToTable("CategoryList");
                 });
 
-            modelBuilder.Entity("CategoryProduct", b =>
-                {
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CategoryId", "ProductId");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("CategoryProduct");
-                });
-
             modelBuilder.Entity("ListProduct", b =>
                 {
                     b.Property<int>("ListId")
@@ -185,21 +170,6 @@ namespace UniveraStoreCase.DataAccess.Migrations
                     b.HasOne("UniveraStoreCase.Entities.Entities.List", null)
                         .WithMany()
                         .HasForeignKey("ListId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("CategoryProduct", b =>
-                {
-                    b.HasOne("UniveraStoreCase.Entities.Entities.Category", null)
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("UniveraStoreCase.Entities.Entities.Product", null)
-                        .WithMany()
-                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

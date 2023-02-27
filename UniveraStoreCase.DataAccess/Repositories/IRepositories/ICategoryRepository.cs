@@ -8,8 +8,8 @@ using UniveraStoreCase.Entities.Entities;
 
 namespace UniveraStoreCase.DataAccess.Repositories.IRepositories
 {
-    public interface IProductRepository : IRepository<Product>
+    public interface ICategoryRepository : IRepository<Category>
     {
-        
+        IEnumerable<ProductResponseDto> GetProductByCategory(int categoryId);
     }
 }

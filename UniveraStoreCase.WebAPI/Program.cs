@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using System.Configuration;
-using System.Reflection;
+using UniveraStoreCase.Business.Mapping;
+using UniveraStoreCase.Business.Services.CategoryServices;
 using UniveraStoreCase.Business.Services.ProductServices;
 using UniveraStoreCase.DataAccess.Data;
 using UniveraStoreCase.DataAccess.Repositories.EfCoreRepositories;
@@ -17,14 +16,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<IProductService,ProductService>();
+builder.Services.AddScoped<IProductRepository, EfProductRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ICategoryRepository, EfCategoryRepository>();
+
+
 builder.Services.AddDbContext<UniveraDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlDb")));
 
-builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
-
-builder.Services.AddScoped<IProductService,ProductService>();
-
-builder.Services.AddScoped<IProductRepository,EfProductRepository>();
+builder.Services.AddAutoMapper(typeof(MapProfile));
 
 var app = builder.Build();
 

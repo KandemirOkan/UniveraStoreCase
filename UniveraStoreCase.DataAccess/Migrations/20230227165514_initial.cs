@@ -84,30 +84,6 @@ namespace UniveraStoreCase.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CategoryProduct",
-                columns: table => new
-                {
-                    CategoryId = table.Column<int>(type: "int", nullable: false),
-                    ProductId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CategoryProduct", x => new { x.CategoryId, x.ProductId });
-                    table.ForeignKey(
-                        name: "FK_CategoryProduct_Category_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "Category",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_CategoryProduct_Product_ProductId",
-                        column: x => x.ProductId,
-                        principalTable: "Product",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "ListProduct",
                 columns: table => new
                 {
@@ -164,11 +140,6 @@ namespace UniveraStoreCase.DataAccess.Migrations
                 column: "ListId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CategoryProduct_ProductId",
-                table: "CategoryProduct",
-                column: "ProductId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_ListProduct_ProductId",
                 table: "ListProduct",
                 column: "ProductId");
@@ -189,9 +160,6 @@ namespace UniveraStoreCase.DataAccess.Migrations
         {
             migrationBuilder.DropTable(
                 name: "CategoryList");
-
-            migrationBuilder.DropTable(
-                name: "CategoryProduct");
 
             migrationBuilder.DropTable(
                 name: "ListProduct");
