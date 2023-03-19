@@ -15,8 +15,11 @@ namespace UniveraStoreCase.Business.Mapping
 
             CreateMap<Category,CategoryResponseDto>().ReverseMap();
 
-            CreateMap<Category,CategoryRequestDto>().ReverseMap();       
+            CreateMap<Category,CategoryRequestDto>().ReverseMap();
 
+            CreateMap<User, UserRequestDto>().ReverseMap();
+
+            CreateMap<User, UserResponseDto>().ReverseMap();
         }
     }
 }

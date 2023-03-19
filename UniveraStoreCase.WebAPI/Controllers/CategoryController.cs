@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Data;
 using UniveraStoreCase.Business.Services.CategoryServices;
 using UniveraStoreCase.Entities.DTOs.RequestDtos;
 using UniveraStoreCase.Entities.DTOs.ResponseDtos;
 
 namespace UniveraStoreCase.WebAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoryController : ControllerBase
@@ -29,7 +32,7 @@ namespace UniveraStoreCase.WebAPI.Controllers
             var product = _categoryService.GetProductByCategoryId(categoryId);
             return Ok(product);
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPost("[action]")]
         public IActionResult CreateCategory([FromBody] CategoryRequestDto newCategory)
         {
@@ -37,14 +40,14 @@ namespace UniveraStoreCase.WebAPI.Controllers
             return Ok();
 
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPut("[action]")]
         public IActionResult UpdateCategory([FromBody] CategoryResponseDto newCategory)
         {
             _categoryService.UpdateCategory(newCategory);
             return Ok();
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpDelete("[action]/{categoryId}")]
         public IActionResult DeleteProduct(int categoryId)
         {

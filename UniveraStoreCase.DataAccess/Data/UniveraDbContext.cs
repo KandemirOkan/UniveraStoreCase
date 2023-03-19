@@ -20,6 +20,7 @@ namespace UniveraStoreCase.DataAccess.Data
         public DbSet<Product> Product { get; set; }
         public DbSet<Category> Category { get; set; }
         public DbSet<List> List { get; set; }
+        public DbSet<User> User { get; set; }
         public DbSet<ProductCategory> ProductCategory { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

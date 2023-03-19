@@ -13,10 +13,6 @@ namespace UniveraStoreCase.Entities.DTOs.ResponseDtos
         public decimal Price { get; set; }
         public string Description { get; set; }
         public int ModelYear { get; set; }
-        public string Brand { get; set; }
-        public string Color { get; set; }
-        public string FuelType { get; set; }
-        public string VehicleType { get; set; }
 
     }
 }
